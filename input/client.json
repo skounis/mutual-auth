@@ -1,0 +1,7 @@
+{
+    "host": "server.ma.appseed.io",
+    "port": "8080",
+    "key":"certs/cs/client-key.pem",
+    "cert":"certs/cs/client-crt.pem",
+    "ca":"certs/cs/server-ca-crt.pem"
+}
