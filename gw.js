@@ -5,10 +5,10 @@ const https = require("https");
 const port = process.env.PORT || 8080;
 
 const options = {
-  key: fs.readFileSync(`${__dirname}/certs/cs/server-key.pem`),
-  cert: fs.readFileSync(`${__dirname}/certs/cs/server-crt.pem`),
+  key: fs.readFileSync(`${__dirname}/certs/fed/gw-key.pem`),
+  cert: fs.readFileSync(`${__dirname}/certs/fed/gw-crt.pem`),
   ca: [
-    fs.readFileSync(`${__dirname}/certs/cs/client-ca-crt.pem`)
+    fs.readFileSync(`${__dirname}/certs/fed/ca-crt.pem`)
   ],
   // Requesting the client to provide a certificate, to authenticate.
   requestCert: true,
@@ -23,20 +23,8 @@ app.get('/', function(req,res) {
   res.send('"OK!');
 });
 
-app.get('/', function (req, res) {
-  res.end(JSON.stringify(data.crl, null, 2));
-})
-
 app.get('/feds', function (req, res) {
   res.end(JSON.stringify(data.federators, null, 2));
-})
-
-app.get('/crl', function (req, res) {
-  res.end(JSON.stringify(data.crl, null, 2));
-})
-
-app.get('/batches/:id', function (req, res) {
-  res.end(JSON.stringify(data.batches[req.params.id], null, 2));
 })
 
 https
