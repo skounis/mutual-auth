@@ -2,15 +2,21 @@ const fs = require("fs");
 const https = require("https");
 const message = { msg: "Hello!" };
 
+// Capture arguments
+var args = process.argv.slice(2);
+
+// Load input
+const options = JSON.parse(fs.readFileSync(__dirname + "/input/" + args[0] + '.json', 'utf8'));
+
 const req = https.request(
   {
-    host: "server.ma.appseed.io",
-    port: 8080,
+    host: options.host, //"server.ma.appseed.io",
+    port: options.port, // 8080
     secureProtocol: "TLSv1_2_method",
-    key: fs.readFileSync(`${__dirname}/certs/client-key.pem`),
-    cert: fs.readFileSync(`${__dirname}/certs/client-crt.pem`),
+    key: fs.readFileSync(`${__dirname}/${options.key}`),
+    cert: fs.readFileSync(`${__dirname}/${options.cert}`),
     ca: [
-      fs.readFileSync(`${__dirname}/certs/server-ca-crt.pem`)
+      fs.readFileSync(`${__dirname}/${options.ca}`)
     ],
     path: "/",
     method: "GET",
