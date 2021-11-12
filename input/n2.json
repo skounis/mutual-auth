@@ -1,4 +1,5 @@
 {
+    "name": "Federated node 2",
     "host": "gw.ma.appseed.io",
     "port": "8080",
     "key":"certs/fed/n2-key.pem",

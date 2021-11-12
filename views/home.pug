@@ -1,0 +1,16 @@
+mixin node(node)
+    dt #{node.country}
+    dd #{node.url}
+        br
+        //- a Load...
+
+h1 #{title}
+h2 Gateway
+p Quering the Gateway. Getting a list of all the federated nodes: 
+pre
+    dl 
+        each n in nodes
+            +node(n)
+
+h2 Federated nodes
+p Quering all the federated nodes. Compile their response: 
