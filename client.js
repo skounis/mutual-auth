@@ -3,7 +3,7 @@ const https = require("https");
 const message = { msg: "Hello!" };
 
 // Capture arguments
-var args = process.argv.slice(2);
+const args = process.argv.slice(2);
 
 // Load input
 const options = JSON.parse(fs.readFileSync(__dirname + "/input/" + args[0] + '.json', 'utf8'));
