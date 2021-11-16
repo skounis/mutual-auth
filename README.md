@@ -121,6 +121,15 @@ openssl pkcs12 -export -out client-key.p12 -inkey client-key.pem -in client-crt.
 Check 
 *  https://www.ssl.com/how-to/configuring-client-authentication-certificates-in-web-browsers/
 
+
+## Deploy
+Start the GW and two Nodes as services: 
+```
+pm2 start npm --name ma -- run gw
+pm2 start npm --name ma -- run n2
+pm2 start npm --name ma -- run n2
+```
+
 ## References
 * https://www.matteomattei.com/client-and-server-ssl-mutual-authentication-with-nodejs/
 * https://stackoverflow.com/questions/21141215/creating-a-p12-file
