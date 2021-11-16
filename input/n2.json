@@ -1,6 +1,8 @@
 {
+    "name": "Federated node 2",
     "host": "gw.ma.appseed.io",
     "port": "8080",
+    "data": "n2.json",
     "key":"certs/fed/n2-key.pem",
     "cert":"certs/fed/n2-crt.pem",
     "ca":"certs/fed/ca-crt.pem"
