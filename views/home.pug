@@ -1,16 +1,31 @@
+script !{encode}
+
 mixin node(node)
     dt #{node.country}
     dd #{node.url}
         br
         //- a Load...
 
+mixin batch(batch)
+    dt #{batch.reference}
+    dd
+        each d in batch.crl
+            div 
+                a(href='/batches/' + encode(batch.reference) + '/' + d.batchId) #{[d.country]} - #{d.batchId}
+        //- a Load...
+
 h1 #{title}
 h2 Gateway
-p Quering the Gateway. Getting a list of all the federated nodes: 
+p Query the Gateway. Getting a list of all the federated nodes: 
 pre
-    dl 
+    dl
         each n in nodes
             +node(n)
 
 h2 Federated nodes
-p Quering all the federated nodes. Compile their response: 
+p Query all the federated nodes. Compile their responses: 
+h3 Batches 
+pre 
+    dl
+        each c in crl
+            +batch(c)
