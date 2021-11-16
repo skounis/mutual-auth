@@ -10,8 +10,9 @@ sudo echo '127.0.0.1 server.ma.appseed.io' >> /etc/hosts
 
 Start the server:
 ```
-node server.js
-```
+npm run server
+``` 
+
 
 Query the server - curl
 ```
@@ -20,7 +21,7 @@ curl -v -s -k --key certs/cs/client-key.pem --cert certs/cs/client-crt.pem https
 
 Query the server - node
 ```
-node client.js client 
+npm run client
 ```
 
 ### Certificates
@@ -48,7 +49,7 @@ sudo sh -c "echo '127.0.0.1 n2.ma.appseed.io' >> /etc/hosts"
 
 Start the server:
 ```
-node gw.js
+npm run gw
 ```
 
 Query the gateway as node 1 and node 2 - curl
@@ -59,8 +60,8 @@ curl -v -s -k --key certs/fed/n2-key.pem --cert certs/fed/n2-crt.pem https://gw.
 
 Query the gateway - nodejs
 ```
-node client.js n1
-node client.js n2
+npm run n1
+npm run n2
 ```
 
 
