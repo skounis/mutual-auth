@@ -1,0 +1,81 @@
+{
+    "crl": [
+        {
+            "batchId": "bf2cbcc2-415b-11ec-ba1c-0242ac130002",
+            "country": "BE",
+            "modified": "2021-11-01T00:00:00Z"
+        },
+        {
+            "batchId": "03b18fd0-415c-11ec-ba1c-0242ac130002",
+            "country": "BE",
+            "modified": "2021-11-15T00:00:00Z"
+        }
+    ],
+
+    "batches": {
+        "bf2cbcc2-415b-11ec-ba1c-0242ac130002": [
+            {
+                "country": "BE",
+                "hash": "27b6c21c44ddfbb8e07239fa0a912510ac0a021NLbd79fb7e911f59f5a81e528",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            },
+            {
+                "country": "BE",
+                "hash": "c878fa5a0d66a5a41a21162a53bdad88ad5663e34114b20f52ce72db77e061d7",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            },
+            {
+                "country": "BE",
+                "hash": "4ce040576e34fdc0683db4a684f1a35d8ad4b6a3bf250671eb8a7842f907c448",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            },
+            {
+                "country": "BE",
+                "hash": "6924067e0ce0f4327721d3f9a1dc9e5b151a2212779b664810d014193add56a4",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            },
+            {
+                "country": "BE",
+                "hash": "0d70fd6e6f498fb6ebfe85e53c50ebac6bbdea9bf1f5cb4e3dd9677abb8e5972",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            }
+        ],
+        "03b18fd0-415c-11ec-ba1c-0242ac130002": [
+            {
+                "country": "BE",
+                "hash": "27b6c21c44ddfbb8e07239fa0a912510ac0a021NLbd79fb7e911f59f5a81e528",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            },
+            {
+                "country": "BE",
+                "hash": "c878fa5a0d66a5a41a21162a53bdad88ad5663e34114b20f52ce72db77e061d7",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            },
+            {
+                "country": "BE",
+                "hash": "4ce040576e34fdc0683db4a684f1a35d8ad4b6a3bf250671eb8a7842f907c448",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            },
+            {
+                "country": "BE",
+                "hash": "6924067e0ce0f4327721d3f9a1dc9e5b151a2212779b664810d014193add56a4",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            },
+            {
+                "country": "BE",
+                "hash": "0d70fd6e6f498fb6ebfe85e53c50ebac6bbdea9bf1f5cb4e3dd9677abb8e5972",
+                "hashType": "ucvi",
+                "suspendedUntil": "2021-11-01T00:00:00Z"
+            }
+        ]
+    }
+}
