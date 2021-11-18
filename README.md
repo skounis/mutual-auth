@@ -1,5 +1,5 @@
 
-# SSL Mutual Auth with Node
+# SSL Mutual Authentication with Node
 SSL mutual authentication example with NodeJS.
 
 ## Client / Server
