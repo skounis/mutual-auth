@@ -18,7 +18,7 @@ const req = https.request(
     ca: [
       fs.readFileSync(`${__dirname}/${options.ca}`)
     ],
-    path: "/",
+    path: "/api",
     method: "GET",
     headers: {
       "Content-Type": "application/json",

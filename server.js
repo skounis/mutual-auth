@@ -1,3 +1,4 @@
+const pug = require('pug');
 const express = require('express');
 const fs = require("fs");
 const https = require("https");
@@ -19,23 +20,30 @@ const options = {
 // Load mock data
 const data = JSON.parse(fs.readFileSync(__dirname + "/data/" + "data.json", 'utf8'));
 const app = express();
-app.get('/', function(req,res) {
+
+app.set('view engine', 'pug');
+app.get('/', function (req, res) {
+  try {
+    res.render('server', { });
+  } catch (error) {
+    console.log(error);
+    res.render('error', { message: error });
+  }
+});
+
+app.get('/api', function(req,res) {
   res.send('"OK!');
 });
 
-app.get('/', function (req, res) {
-  res.end(JSON.stringify(data.crl, null, 2));
-})
-
-app.get('/feds', function (req, res) {
+app.get('/api/feds', function (req, res) {
   res.end(JSON.stringify(data.federators, null, 2));
 })
 
-app.get('/crl', function (req, res) {
+app.get('/api/crl', function (req, res) {
   res.end(JSON.stringify(data.crl, null, 2));
 })
 
-app.get('/batches/:id', function (req, res) {
+app.get('/api/batches/:id', function (req, res) {
   res.end(JSON.stringify(data.batches[req.params.id], null, 2));
 })
 
