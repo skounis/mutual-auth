@@ -3,6 +3,16 @@
 SSL mutual authentication example with NodeJS.
 
 ## Client / Server
+
+Test it online: 
+
+1. [Download the client certification in `.p12` format](https://github.com/skounis/mutual-auth/raw/main/certs/cs/client-key.p12)
+2. Imprort the [`.p12`](https://github.com/skounis/mutual-auth/raw/main/certs/cs/client-key.p12) certification in your browser
+   passkey: `phrase` 
+   see: https://computersluggish.com/windows-tutorials/software-apps/how-to-add-a-certificate-in-microsoft-edge/
+3. Visit https://server.ma.appseed.io:8090/
+
+### Local Development Instructions
 Configure the domain names:
 ```
 sudo echo '127.0.0.1 server.ma.appseed.io' >> /etc/hosts
