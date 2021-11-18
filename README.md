@@ -46,12 +46,13 @@ All the certificates are create with the same pass phrase: `phrase`
 ## Federated Nodes with a Gateway
 Test it online: 
 
-> Note: Access to the web interface of the nodes is left public. API communication is protected my mTLS
+> **Note**: Access to the web interface of the nodes is intentionaly left public. API communication is protected my mTLS.
+> Go directly to Step 3
 
-1. ~~[Download the client certification in `.p12` format](https://github.com/skounis/mutual-auth/raw/main/certs/cs/client-key.p12)~~
-2. ~~Imprort the [`.p12`](https://github.com/skounis/mutual-auth/raw/main/certs/cs/client-key.p12) certification in your browser~~
-   - ~~passkey: `phrase` ~~
-   - ~~see: https://computersluggish.com/windows-tutorials/software-apps/how-to-add-a-certificate-in-microsoft-edge/~~
+1. [Download the client certification in `.p12` format](https://github.com/skounis/mutual-auth/raw/main/certs/cs/client-key.p12)
+2. Imprort the [`.p12`](https://github.com/skounis/mutual-auth/raw/main/certs/cs/client-key.p12) certification in your browser
+   - passkey: `phrase`
+   - see: https://computersluggish.com/windows-tutorials/software-apps/how-to-add-a-certificate-in-microsoft-edge/
 3. Visit 
    - https://n1.ma.appseed.io:8081/
    - https://n1.ma.appseed.io:8082/
